@@ -12,6 +12,7 @@ namespace API.Models.ResponseModels
         {
             WeatherForecast = new List<WeatherResponseModel>();
         }
+        public string City { get; set; }
         public List<WeatherResponseModel> WeatherForecast { get; set; }
         public List<WeatherHistory> WeatherHistory { get; set; }
     }

@@ -47,7 +47,7 @@ namespace API.Repository
             if (payloadModel.WeatherForecast != null)
                 await AddWeatherHistoryAsync(payloadModel);
 
-            var weatherHistory = GetWeatherHistory(payloadModel.WeatherForecast[0].City);
+            var weatherHistory = GetWeatherHistory(payloadModel.City);
             payloadModel.WeatherHistory = weatherHistory;
             return payloadModel;
         }
@@ -79,7 +79,7 @@ namespace API.Repository
             if (payloadModel.WeatherForecast != null)
                 await AddWeatherHistoryAsync(payloadModel);
 
-            var weatherHistory = GetWeatherHistory(payloadModel.WeatherForecast[0].City);
+            var weatherHistory = GetWeatherHistory(payloadModel.City);
             payloadModel.WeatherHistory = weatherHistory;
             return payloadModel;
         }
@@ -89,7 +89,7 @@ namespace API.Repository
            
             var weatherHistory = new WeatherHistory()
             {
-                City = model.WeatherForecast[0].City,
+                City = model.City,
                 Date = model.WeatherForecast[0].Date,
                 Temperature = model.WeatherForecast[0].CurrentTemperature,
                 Humidity = model.WeatherForecast[0].CurrentHumidity

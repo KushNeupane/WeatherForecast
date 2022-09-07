@@ -7,9 +7,7 @@ using System.Threading.Tasks;
 namespace API.Models.ResponseModels
 {
     public class WeatherResponseModel
-    {
-        
-        public string City { get; set; }
+    {   
         public int CurrentTemperature { get; set; }
         public int CurrentHumidity { get; set; }
         public string Date { get; set; }
